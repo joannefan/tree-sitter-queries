@@ -1,0 +1,41 @@
+{
+    "javascript": {
+        "identifier": "(identifier) @variable",
+        "property": "(property_identifier) @property",
+
+        "function_definition": "(function_declaration name: (identifier) @function)",
+        "function_expression": "(function_expression name: (identifier) @function)",
+        "method_definition": "(method_definition name: (property_identifier) @function.method)",
+        "method_definition_keyvalue": "(pair key: (property_identifier) @function.method value: [(function_expression) (arrow_function)])",
+        "prop_assignment": "(assignment_expression left: (member_expression property: (property_identifier) @function.method) right: [(function_expression) (arrow_function)])",
+        "var_initialize_function": "(variable_declarator name: (identifier) @function value: [(function_expression) (arrow_function)])",
+        "var_assign_function": "(assignment_expression left: (identifier) @function right: [(function_expression) (arrow_function)])",
+        "function_call": "(call_expression function: (identifier) @function) @function_call",
+        "method_call": "(call_expression function: (member_expression property: (property_identifier) @function.method)) @method_call",
+        "class_definition": "(class_declaration name: (identifier) @class.name body: (class_body))",
+        "var_initialize_class": "(variable_declarator name: (identifier) @class.name value: (class))",
+        "var_assign_class": "(assignment_expression left: (identifier) @class.name right: (class))"
+    },
+    "typescript": {
+        "function_definition": "(function_declaration name: (identifier) @function)",
+        "function_expression": "(function_expression name: (identifier) @function)",
+        "method_definition": "(method_definition name: (property_identifier) @function.method)",
+        "method_definition_keyvalue": "(pair key: (property_identifier) @function.method value: [(function_expression) (arrow_function)])",
+        "prop_assignment": "(assignment_expression left: (member_expression property: (property_identifier) @function.method) right: [(function_expression) (arrow_function)])",
+        "var_initialize_function": "(variable_declarator name: (identifier) @function value: [(function_expression) (arrow_function)])",
+        "var_assign_function": "(assignment_expression left: (identifier) @function right: [(function_expression) (arrow_function)])",
+        "function_call": "(call_expression function: (identifier) @function) @function_call",
+        "method_call": "(call_expression function: (member_expression property: (property_identifier) @function.method)) @method_call",
+        "class_definition": "(class_declaration name: (type_identifier) @class.name body: (class_body))",
+        "var_initialize_class": "(variable_declarator name: (identifier) @class.name value: (class))",
+        "var_assign_class": "(assignment_expression left: (identifier) @class.name right: (class))",
+
+        "function_signature": "(function_signature name: (identifier) @function)",
+        "method_signature": "(method_signature name: (property_identifier) @method)",
+        "abstract_method_signature": "(abstract_method_signature name: (property_identifier) @abstract_method)",
+        "abstract_class": "(abstract_class_declaration name: (type_identifier) @abstract_class)",
+        "interface": "(interface_declaration name: (type_identifier) @interface)",
+        "constructor": "(new_expression constructor: (identifier) @constructor)" 
+    }
+}
+
